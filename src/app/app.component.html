@@ -44,19 +44,43 @@
   <router-outlet></router-outlet>
 </div>
 <style>
+  * {
+    font-family: 'PT Serif', serif;
+    list-style: none;
+  }
+  
   nav {
-    /* background-color: aqua; */
-    margin-left: 50%;
-    padding: 0;
+    display: flex;
+    justify-content: center;
   }
   a {
     text-decoration: none;
-    cursor: default;
-    margin-right: 10px;
-    align-self: flex-end;
   }
   a:hover {
-    background-color: rgb(143, 128, 184);
+    text-decoration: underline;
     border-radius: 5px;
   }
+  ul {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+  }
+  li {
+    counter-increment: my-awesome-counter;
+    margin: 0.25rem;
+  }
+  li::before {
+    content: counter(my-awesome-counter);
+    background: #171c57;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    color: white;
+    text-align: center;
+    margin-right: 0.5rem;
+  }
+  ul ul li::before {
+  background: #516bff;
+}
 </style>
