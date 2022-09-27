@@ -2,9 +2,15 @@
   <div class="container-fluid">
     <!-- suporte a mobile -->
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Visualizar itens</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <a class="navbar-brand" href="#">Projeto final</a>
     </div>
-    
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#">Inicial</a></li>
@@ -18,14 +24,25 @@
                 Dashboard
               </a>
             </li>
+            <li role="separator" class="divider"></li>
             <li>
               <a [routerLink]="['/calculadora']">
                 Calculadora
               </a>
             </li>
             <li>
+              <a [routerLink]="['/conversor-moedas']">
+                Conversor de moedas
+              </a>
+            </li>
+            <li>
               <a [routerLink]="['/tarefas']">
                 Gerenciador de tarefas
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/jogo-da-velha']">
+                Jogo da velha
               </a>
             </li>
           </ul>
@@ -37,49 +54,3 @@
 <div class="container-fluid">
   <router-outlet></router-outlet>
 </div>
-<style>
-
-  .navbar-header {
-    display: flex;
-    justify-content: center;
-    font-size: x-large;
-    background-color: #a7b0e6;
-    border-radius: 5px;
-  }
-
-  nav {
-    display: flex;
-    justify-content: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-    border-radius: 5px;
-  }
-  ul {
-    list-style: none;
-    counter-reset: my-awesome-counter;
-  }
-  li {
-    counter-increment: my-awesome-counter;
-    margin: 0.25rem;
-  }
-  li::before {
-    content: counter(my-awesome-counter);
-    background: #171c57;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    line-height: 2rem;
-    color: white;
-    text-align: center;
-    margin-right: 0.5rem;
-  }
-  ul ul li::before {
-  background: #516bff;
-}
-</style>
