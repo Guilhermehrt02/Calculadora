@@ -2,12 +2,6 @@
   <div class="container-fluid">
     <!-- suporte a mobile -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Visualizar itens</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <a class="navbar-brand" href="#">Projeto final</a>
     </div>
     
@@ -44,14 +38,19 @@
   <router-outlet></router-outlet>
 </div>
 <style>
-  * {
-    font-family: 'PT Serif', serif;
-    list-style: none;
+
+  .navbar-header {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    background-color: #a7b0e6;
+    border-radius: 5px;
   }
-  
+
   nav {
     display: flex;
     justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   a {
     text-decoration: none;
